@@ -6,10 +6,10 @@ import string
 allowed = 'abcdefghijklmnopqrstuvwxyz1234567890'
 
 def check(x):
-    for i in (len(x)):
+    for i in range (len(x)):
         if x[i] in allowed:
-            return True
-    return False
+            return False
+    return True
 
 
 # Reads the ascii art title from greeting.txt
