@@ -69,15 +69,15 @@ while True:
     # Asks the user if they want to go again
     # If the user doesn't want to go again it exits the program
     goAgain = "" # Resets the go again input
-    while goAgain != "yes" and goAgain != "y":
-
+    while True:
         print("\nWould you like to go again? (y/n)")
         goAgain = str(input(": ")).lower()
 
         if goAgain == "no" or goAgain == "n":
             print("Bye bye!\n\n")
             exit()
-            
+        elif goAgain == "yes" or goAgain == "y":
+            break
         print("Invalid input!")
 
     print("\n\n")
