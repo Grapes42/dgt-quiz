@@ -14,7 +14,7 @@ def check(x):
 
 # Reads the ascii art title from greeting.txt
 # then prints it to the shell
-with open('greeting.txt', 'r') as f:
+with open('txt/greeting.txt', 'r') as f:
     print(f.read())
 
 # Defining lists and variables
@@ -25,7 +25,7 @@ userScore = 0
 
 # Reads the questions and answers from questions.tsv 
 # then converts them into two separate lists
-with open('questions.tsv', 'r') as file:
+with open('tsv/questions.tsv', 'r') as file:
     
     # Reads from the .tsv
     tsvFile = csv.reader(file, delimiter="\t") 
