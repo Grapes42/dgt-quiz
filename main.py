@@ -1,6 +1,5 @@
 import csv
 import math
-import string
 
 # Functions
 allowed = 'abcdefghijklmnopqrstuvwxyz1234567890'
@@ -84,5 +83,3 @@ while True:
 
     # Resets the users score
     userScore = 0
-
-    import string
