@@ -2,13 +2,20 @@ import csv
 import math
 
 # Functions
-allowed = 'abcdefghijklmnopqrstuvwxyz1234567890'
+validChars = 'abcdefghijklmnopqrstuvwxyz1234567890'
 
-def check(x):
+def checkInvalid(x):
     for i in range (len(x)):
-        if x[i] in allowed:
+        if x[i] in validChars:
             return False
     return True
+
+def checkTrick(i):
+    a = ans[i]
+    if a[0] == "!" and (userAns != a[1:] or userAns == ""):
+        return True
+    else:
+        return False
 
 
 # Reads the ascii art title from greeting.txt
@@ -46,13 +53,17 @@ while True:
             print("Question {}. {}:".format(i+1, txt[i]))
             userAns = str(input(": ")).lower()
 
-            # Adds score and prints "correct" if you got the question correct,
-            if userAns == ans[i]:
+            # Adds score and prints "correct" if you got the question correct,'
+            if checkTrick(i):
+                print("Correct! It was a trick question, there is no translation for that word\n")
+                userScore += 1
+                break
+            elif userAns == ans[i]:
                 print("Correct! ;)\n")
                 userScore += 1
                 break
             # Tests if the user enters an invalid input
-            elif check(userAns):
+            elif checkInvalid(userAns):
                 print("It's not a trick question, enter some text\n")
             # Prints "Incorrect" if you got the question wrong
             else:
