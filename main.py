@@ -10,8 +10,8 @@ def checkInvalid(x):
             return False
     return True
 
-def checkTrick(i):
-    a = ans[i]
+def checkTrick(x):
+    a = ans[x]
     if a[0] == "!" and (userAns != a[1:] or userAns == ""):
         return True
     else:
