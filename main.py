@@ -20,8 +20,8 @@ def checkTrick(i):
 
 # Reads the ascii art title from greeting.txt
 # then prints it to the shell
-with open('txt/greeting.txt', 'r') as f:
-    print(f.read())
+with open('txt/greeting.txt', 'r') as file:
+    print(file.read())
 
 # Defining lists and variables
 txt = []
